@@ -5,16 +5,17 @@ To run the code found in this repo:
   To clone this repo please follow the instructions found in the github.com link: 
   https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
 
-2. Download and install Flask (Python) or any other suitable web application framework.
-3. Download and install PostgreSQL or any other suitable relational database management system
+2. Download and install Flask (Python) 
+3. Download and install PostgreSQL
 4. Open terminal and create a local SQL Database named 'vet_management' - Run the command: createdb vet_management
 5. Open terminal and navigate to the location the repo was downloaded to, ensure you are at the same level as the app.py file.
-6. Run the command: psql -d vet_management -f db/vet_management.sql
-7. Run the command: python3 consoles.py
-8. Run the command: Flask run
-9. Open your browser (Google Chrome Version 85.0.4183.121 (Official Build) (64-bit)) and navigate to Localhost:5000
+6. Within terminal Run the command: psql -d vet_management -f db/vet_management.sql
+7. Within terminal Run the command: python3 consoles.py
+8. Within terminal Run the command: Flask run
+9. Open your browser (build used: Google Chrome Version 85.0.4183.121 (Official Build) (64-bit))
+10. Navigate to URL: Localhost:5000
 
-You should be presented with the Vet Surgery Management System welcome page.
+You should now be presented with the Vet Surgery Management System welcome page.
 
 
 
