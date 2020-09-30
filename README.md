@@ -8,7 +8,7 @@ To run the code found in this repo:
 2. Download and install Flask (Python) 
 3. Download and install PostgreSQL
 4. Open terminal and create a local SQL Database named 'vet_management' - Run the command: createdb vet_management
-5. Open terminal and navigate to the location the repo was downloaded to, ensure you are at the same level as the app.py file.
+5. Within terminal navigate to the location the repo was downloaded to, ensure you are at the same level as the app.py file.
 6. Within terminal Run the command: psql -d vet_management -f db/vet_management.sql
 7. Within terminal Run the command: python3 consoles.py
 8. Within terminal Run the command: Flask run
