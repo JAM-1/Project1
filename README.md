@@ -1,7 +1,6 @@
 # Project1
 
 To run the code found in this repo:
-(please note the following instructions are based on using a setup as per the original)
 1. Clone repo.
   To clone this repo please follow the instructions found in the github.com link: 
   https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
