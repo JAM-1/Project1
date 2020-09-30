@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<ul>
+<a href="/employees/new"><button>Add Employee</button></a>
+</ul>
+    <h2>Vet Records:</h2>
+        {% for vet in all_vets %}
+            <h4>{{vet.name}}</h4>
+                <div>
+                    <form  action="/employees/{{vet.id}}" method="get">
+                        <button class="trash-button">View</button>
+                    </form>
+                    <form  action="/employees/{{vet.id}}/edit" method="post">
+                        <button class="trash-button">Edit</button>
+                    </form>
+                    <form  action="/employees/{{vet.id}}/delete" method="post">
+                        <button class="trash-button">Delete</button>
+                    </form>
+                </div>  
+                <hr width="475;"
+                align="left">
+        {% endfor %}
+
+{% endblock %}

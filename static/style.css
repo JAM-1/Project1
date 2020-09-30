@@ -1,0 +1,39 @@
+body {
+    background-image: url("/static/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-size: 100%;
+    padding-left: 175px;
+    padding-right: 175px;
+    align-items: center;
+    justify-content: center;
+}
+
+body > header > nav > ul {
+    padding: 0px;
+}
+
+body > main > section > h2 {
+    display: inline;
+}
+
+body > main > section > h3 {
+    margin: 5px;
+}
+
+body > main > div > form {
+    display: inline;
+}
+
+body > main > h4 {
+    margin-bottom: 5px;
+}
+
+body > main > section > h4 {
+    margin: 0px;
+}
+
+h3,h4 {
+    display: inline;
+}

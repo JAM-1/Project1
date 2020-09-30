@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="new">
+  <form action="/employees" method="post">
+    <div>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" required autofocus>
+    </div>
+    <div>
+      <label for="contact">Tel. Number: </label>
+      <input type="text" id="contact" name="contact" required>
+    </div>
+    <button type="submit">Update Employee Record</button>
+  </form>
+</section>
+  {% endblock %}

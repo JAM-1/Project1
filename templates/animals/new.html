@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="new">
+    <form action="/animals" method="post">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" placeholder="name" required autofocus>
+        </div>
+        <div>
+            <label for="type">Type: </label>
+            <input type="text" id="type" name="type" placeholder="type" required autofocus>
+        </div>
+        <div>
+            <label for="dob">DOB: </label>
+            <input type="text" id="dob" name="dob" placeholder="dob" required autofocus>
+        </div>
+        <div>
+            <label for="owner">Owner: </label>
+            <select id="owner" name="owner">
+            {% for owner in all_owners %}
+            <option value="{{owner.id}}">{{owner.name}}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="vet">Vet: </label>
+            <select id="vet" name="vet">
+            {% for vet in all_vets %}
+            <option value="{{vet.id}}">{{vet.name}}</option>
+            {% endfor %}
+            </select>
+        </div>
+        <button type="submit">Add Animal</button>
+    </form>
+</section>
+
+{% endblock %}

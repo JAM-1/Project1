@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <form action="/allergys" method="post">
+        <label for="animal">Animal: </label>
+        <select id="animal" name="animal">
+        {% for pet in all_animals %}
+            <option value="{{ pet.id }}"
+            {% if pet.id== pet.id %} selected="selected"{% endif %}>
+            {{ pet.name }}
+            </option>
+        {% endfor %}
+        </select>
+        <label for="allergy">Allergy: </label>
+        <select id="allergy" name="allergy">
+        {% for allergy in all_allergies %}
+            <option value="{{ allergy.id }}"
+            {% if allergy.id== allergy.id %} selected="selected"{% endif %}>
+            {{ allergy.name }}
+            </option>
+        {% endfor %}
+        </select>
+        <button type="submit">Update Allergy Notes</button>
+    </form>
+    
+  </div>
+
+{% endblock %}

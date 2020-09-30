@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+    <a href="/owners/new"><button>Register New Owner</button></a>
+    <a href="/animals/new"><button>Registered Owners: Register New Patient</button></a>
+
+</ul>
+<h2>Patient Records:</h2>
+{% for animal in all_animals %}
+    <h4>{{animal.name}}</h4>
+        <div>
+            <form  action="/animals/{{animal.id}}" method="get">
+                <button class="trash-button">View</button>
+            </form>
+            <form  action="/animals/{{animal.id}}/edit" method="post">
+                <button class="trash-button">Edit</button>
+            </form>
+            <form  action="/animals/{{animal.id}}/delete" method="post">
+                <button class="trash-button">Delete</button>
+            </form>
+            <a href="/medicals"><button>Update Medical Notes</button></a>
+            <a href="/allergys"><button>Update Allergy Info</button></a>
+        </div>
+<hr width="475;"
+    align="left">
+{% endfor %}
+
+{% endblock %}

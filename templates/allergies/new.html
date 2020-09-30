@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="new">
+<form action="/allergies" method="post">
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name" required autofocus>
+  </div>
+  <button type="submit">Update Allergy Record</button>
+</section>
+  {% endblock %}

@@ -1,0 +1,26 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <form action="/medicals" method="post">
+        <label for="animal">Animal: </label>
+        <select id="animal" name="animal">
+        {% for pet in all_animals %}
+            <option value="{{ pet.id }}"
+            {% if pet.id== pet.id %} selected="selected"{% endif %}>
+            {{ pet.name }}
+            </option>
+        {% endfor %}
+        </select>
+        <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" required autofocus>
+        </div>
+        <button type="submit">Update Medical Record</button>
+    </form>
+    
+</section>
+
+{% endblock %}
