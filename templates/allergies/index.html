@@ -1,20 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<ul>
+<ul id="top">
     <a href="/allergies/new">
         <button id="button">New Allergy</button></a>
 </ul>
-<h2>Allergy List</h2>
-
+<h2 class="title">Allergies</h2>
     {% for allergy in all_allergy %}
     <h4>{{allergy.name}}</h4>
-            <div>
+            <div id="row">
             <form  action="/allergies/{{allergy.id}}/edit" method="post">
-                <button >Edit</button>
+                <button id="gbutton">Edit</button>
             </form>
             <form  action="/allergies/{{allergy.id}}/delete" method="post">
-                <button class="trash-button">Delete</button>
+                <button id="gbutton">Delete</button>
             </form>
         </div>
 <hr width="475;"

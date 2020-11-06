@@ -1,16 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="new">
-  <form action="/employees/{{vet.id}}" method="post">
+<section>
+  <form action="/employees/{{vet.id}}" method="post" id="space">
     <div>
-      <label for="name">Name: </label>
       <input type="text" id="name" name="name" value="{{vet.name}}" required autofocus>
     </div>
     <div>
-      <label for="contact">Tel. Number: </label>
       <input type="text" id="contact" name="contact" value="{{vet.contact}}" required>
     </div>
-    <button type="submit">Update: </button>
+    <button type="submit" id="gbutton">Update</button>
   </form>
 </section>
 {% endblock %}

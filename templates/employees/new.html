@@ -1,16 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="new">
-  <form action="/employees" method="post">
+<section>
+  <form action="/employees" method="post" id="space">
     <div>
-      <label for="name">Name: </label>
-      <input type="text" id="name" name="name" required autofocus>
+      <input type="text" id="name" name="name" placeholder="Name" required autofocus>
     </div>
     <div>
-      <label for="contact">Tel. Number: </label>
-      <input type="text" id="contact" name="contact" required>
+      <input type="text" id="contact" name="contact" placeholder="Telephone Number" required>
     </div>
-    <button type="submit">Update Employee Record</button>
-  </form>
+    <button type="submit" id="gbutton">Add</button>
+  </form> 
 </section>
   {% endblock %}

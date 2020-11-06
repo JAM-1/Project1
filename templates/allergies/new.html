@@ -1,11 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="new">
-<form action="/allergies" method="post">
+<form action="/allergies" method="post" id="space">
   <div>
-    <label for="name">Name: </label>
-    <input type="text" id="name" name="name" required autofocus>
+    <input type="text" id="name" name="name" placeholder="Allergy" required autofocus>
   </div>
-  <button type="submit">Update Allergy Record</button>
+  <button type="submit" id="gbutton">Add</button>
 </section>
   {% endblock %}

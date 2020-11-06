@@ -2,11 +2,9 @@
 
 {% block content %}
 <section id="new">
-    <h3>Name: </h3><h4>{{vet.name}}</h4><br>
-    <h3>Contact: </h3><h4>{{vet.contact}}</h4><br>
-    <h3>Current Patients: </h3><br>
-    {% for pets in all_animals %}
-        <h4>{{ pets.name }}</h4><br>
+    <h3 id="details" class="inline">Name</h3><h4 class="inline">{{vet.name}}</h4><br>
+    <h3 id="details" class="inline">Contact</h3><h4 class="inline">{{vet.contact}}</h4><br>
+    <h3 id="details" class="inline">Patients</h3>{% for pets in all_animals %}<h4 class="inline">{{ pets.name }} : </h4>
     {% endfor %}
 </section>
 {% endblock %}

@@ -2,21 +2,21 @@
 
 {% block content %}
 
-<ul>
-<a href="/employees/new"><button>Add Employee</button></a>
+<ul id="top">
+<a href="/employees/new"><button id="button">Add Employee</button></a>
 </ul>
-    <h2>Vet Records:</h2>
+    <h2 class="title">Vet Records:</h2>
         {% for vet in all_vets %}
             <h4>{{vet.name}}</h4>
-                <div>
+                <div id="row">
                     <form  action="/employees/{{vet.id}}" method="get">
-                        <button class="trash-button">View</button>
+                        <button id="gbutton">View</button>
                     </form>
                     <form  action="/employees/{{vet.id}}/edit" method="post">
-                        <button class="trash-button">Edit</button>
+                        <button id="gbutton">Edit</button>
                     </form>
                     <form  action="/employees/{{vet.id}}/delete" method="post">
-                        <button class="trash-button">Delete</button>
+                        <button id="gbutton">Delete</button>
                     </form>
                 </div>  
                 <hr width="475;"
