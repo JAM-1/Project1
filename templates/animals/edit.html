@@ -1,21 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="new">
-  <form action="/animals/{{animal.id}}" method="post">
+  <form action="/animals/{{animal.id}}" method="post" id="space">
     <div>
-      <label for="name">Name: </label>
-      <input type="text" id="name" name="name" value="{{animal.name}}" required autofocus>
+      <input type="text" id="name" name="name" value="{{animal.name}}"required autofocus>
     </div>
     <div>
-      <label for="type">Type: </label>
       <input type="text" id="type" name="type" value="{{animal.type}}" required>
     </div>
     <div>
-      <label for="don">DOB: </label>
       <input type="text" id="dob" name="dob" value="{{animal.dob}}" required>
     </div>
     <div>
-      <label for="owner_id">Owner: </label>
       <select id="owner_id" name="owner_id">
         {% for owner in all_owners %}
           <option value="{{ owner.id }}"
@@ -26,7 +22,6 @@
       </select>
     </div>
     <div>
-      <label for="vet_id">Vet: </label>
       <select id="vet_id" name="vet_id">
         {% for vet in all_vets %}
           <option value="{{ vet.id }}"
@@ -36,8 +31,7 @@
         {% endfor %}
       </select>
     </div>
-    <button type="submit">Update Record</button>
+    <button type="submit">Update</button>
   </form>
 </section>
-
 {% endblock %}

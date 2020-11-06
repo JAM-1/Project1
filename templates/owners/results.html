@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section id="new">
-    <h3>Name: </h3><h4>{{ owner.name}}</h4> <br>
-    <h3>Contact: </h3><h4>{{ owner.contact}}</h4> <br>
-    <h3>Address: </h3><h4>{{ owner.address}}</h4> <br>
-    <h3>Balance: </h3><h4>{{ owner.balance}}</h4> <br>
-    <h3>Registered Pets: </h3><br>
-    {% for pet in all_animals %}
-     <h4>{{ pet.name }}</h4><br>
+<section>
+    <h3 id="details" class="inline">  Name  </h3><h4 class="inline">{{ owner.name}}</h4><br>
+    <h3 id="details" class="inline">Contact </h3><h4 class="inline">{{ owner.contact}}</h4> <br>
+    <h3 id="details" class="inline">Address </h3><h4 class="inline">{{ owner.address}}</h4> <br>
+    <h3 id="details" class="inline">Balance </h3><h4 class="inline">{{ owner.balance}}</h4> <br>
+    <h3 id="details" class="inline">  Pets  </h3>{% for pet in all_animals %}<h4 class="inline">{{ pet.name }} : </h4><br>
     {% endfor %}
 </section>
 {% endblock %}

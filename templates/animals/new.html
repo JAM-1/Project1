@@ -2,36 +2,33 @@
 
 {% block content %}
 <section id="new">
-    <form action="/animals" method="post">
+    <form action="/animals" method="post" id="space">
         <div>
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name" placeholder="name" required autofocus>
+            <input type="text" id="name" name="name" placeholder="Name" required>
         </div>
         <div>
-            <label for="type">Type: </label>
-            <input type="text" id="type" name="type" placeholder="type" required autofocus>
+            <input type="text" id="type" name="type" placeholder="Species" required>
         </div>
         <div>
-            <label for="dob">DOB: </label>
-            <input type="text" id="dob" name="dob" placeholder="dob" required autofocus>
+            <input type="text" id="dob" name="dob" placeholder="DOB" required>
         </div>
         <div>
-            <label for="owner">Owner: </label>
             <select id="owner" name="owner">
+            <option hidden selected disabled value="">Owner</option>
             {% for owner in all_owners %}
             <option value="{{owner.id}}">{{owner.name}}</option>
             {% endfor %}
             </select>
         </div>
         <div>
-            <label for="vet">Vet: </label>
             <select id="vet" name="vet">
+            <option value="" hidden disabled selected>Vet</option>
             {% for vet in all_vets %}
             <option value="{{vet.id}}">{{vet.name}}</option>
             {% endfor %}
             </select>
         </div>
-        <button type="submit">Add Animal</button>
+        <button type="submit">Add Patient</button>
     </form>
 </section>
 

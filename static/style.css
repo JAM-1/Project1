@@ -1,16 +1,88 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 body {
     background-image: url("/static/images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
     background-size: 100%;
-    padding-left: 175px;
-    padding-right: 175px;
-    align-items: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#header{
+    text-align: center;
+}
+
+#top{
     justify-content: center;
 }
 
-body > header > nav > ul {
+.title{
+    display: block;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    text-align: center;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+
+#details{
+    /* display: block; */
+    margin: 5px;
+    height: 50px;
+    width: 1000px;
+    line-height: 30px;
+
+    -moz-border-radius: 12%;
+    border-radius: 12%;
+
+    background-color: lightgray;
+    border: solid black;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
+.inline{
+    display:inline;
+}
+
+#space{
+    margin-top: 10%;
+    margin-left: 35%;
+}
+
+#notes{
+    width: 300px;
+    /* height: 300px; */
+}
+
+/* body > header > nav > ul {
     padding: 0px;
 }
 
@@ -36,4 +108,36 @@ body > main > section > h4 {
 
 h3,h4 {
     display: inline;
+} */
+
+#button {
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    border: 2px solid grey
+}
+
+#button:hover {
+    transform: scale(1.1);
+    background-color: rgb(69, 69, 230);
+    font-weight: bold;
+}
+
+#row{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+#gbutton {
+    border-radius: 25px;
+    background-color: lightgray;
+    color: black;
+    border: 2px solid black
+}
+
+#gbutton:hover {
+    transform: scale(1.1);
+    color: white;
+    font-weight: bold;
 }

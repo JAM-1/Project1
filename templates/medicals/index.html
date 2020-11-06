@@ -4,21 +4,19 @@
 
 {% block content %}
 <section>
-    <form action="/medicals" method="post">
-        <label for="animal">Animal: </label>
+    <form action="/medicals" method="post" id="space">
         <select id="animal" name="animal">
         {% for pet in all_animals %}
             <option value="{{ pet.id }}"
-            {% if pet.id== pet.id %} selected="selected"{% endif %}>
+            {% if pet.id == pet.id %} selected="selected"{% endif %}>
             {{ pet.name }}
             </option>
         {% endfor %}
         </select>
         <div>
-            <label for="description">Description:</label>
-            <input type="text" id="description" name="description" required autofocus>
+            <input contenteditable="true" type="text" name="description" placeholder="Medical Notes" required />
+        <button type="submit">Update</button>
         </div>
-        <button type="submit">Update Medical Record</button>
     </form>
     
 </section>

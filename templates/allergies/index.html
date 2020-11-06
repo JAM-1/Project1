@@ -2,7 +2,8 @@
 
 {% block content %}
 <ul>
-    <a href="/allergies/new"><button>New Allergy</button></a>
+    <a href="/allergies/new">
+        <button id="button">New Allergy</button></a>
 </ul>
 <h2>Allergy List</h2>
 
@@ -10,7 +11,7 @@
     <h4>{{allergy.name}}</h4>
             <div>
             <form  action="/allergies/{{allergy.id}}/edit" method="post">
-                <button class="trash-button">Edit</button>
+                <button >Edit</button>
             </form>
             <form  action="/allergies/{{allergy.id}}/delete" method="post">
                 <button class="trash-button">Delete</button>

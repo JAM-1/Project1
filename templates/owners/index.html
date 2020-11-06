@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<ul>
-    <a href="/owners/new"><button>Register New Owner</button></a>
-    <a href="/animals/new"><button>Registered Owners: Register New Patient</button></a>
+<ul id="top">
+    <a href="/owners/new"><button id="button">Register Owner</button></a>
+    <a href="/animals/new"><button id="button">Register Patient</button></a>
 </ul>
-    <h2>Owner Records:</h2>
+    <h2 class="title">Owner Records</h2>
     {% for owner in all_owners %}
         <h4>{{owner.name}}</h4>
-            <div>
+            <div id="row">
                 <form  action="/owners/{{owner.id}}" method="get">
-                    <button class="trash-button">View</button>
+                    <button id="gbutton">View</button>
                 </form>
                 <form  action="/owners/{{owner.id}}/edit" method="post">
-                    <button class="trash-button">Edit</button>
+                    <button id="gbutton">Edit</button>
                 </form>
                 <form  action="/owners/{{owner.id}}/delete" method="post">
-                    <button class="trash-button">Delete</button>
+                    <button id="gbutton">Delete</button>
                 </form>
             </div>
 <hr width="475;"

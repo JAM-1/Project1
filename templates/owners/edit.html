@@ -1,24 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="new">
-  <form action="/owners/{{owner.id}}" method="post">
+  <form action="/owners/{{owner.id}}" method="post" id="space">
     <div>
-      <label for="name">Name: </label>
-      <input type="text" id="name" name="name" value="{{owner.name}}" required autofocus>
+      <input type="text" id="name" name="name" value="{{owner.name}}" placeholder="Name" required autofocus>
     </div>
     <div>
-      <label for="contact">Tel. Number: </label>
-      <input type="text" id="contact" name="contact" value="{{owner.contact}}" required>
+      <input type="text" id="contact" name="contact" value="{{owner.contact}}" placeholder="Telephone Number"required>
     </div>
     <div>
-      <label for="address">Address: </label>
-      <input type="text" id="address" name="address" value="{{owner.address}}" required>
+      <input type="text" id="address" name="address" value="{{owner.address}}" placeholder="Address" required>
     </div>
     <div>
-      <label for="balance">Balance: </label>
-      <input type="number" id="balance" name="balance" value="{{owner.balance}}" required>
+      <input type="number" id="balance" name="balance" value="{{owner.balance}}" placeholder="Balance" required>
     </div>
-    <button type="submit">Update</button>
+    <button type="submit" id="gbutton">Update</button>
   </form>
 </section>
 {% endblock %}

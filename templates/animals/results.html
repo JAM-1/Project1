@@ -3,18 +3,14 @@
 
 {% block content %}
 <section id="new">
-    <h3>Name: </h3><h4>{{animal.name}}</h4><br>
-    <h3>Age: </h3><h4>{{animal.dob}}</h4><br>
-    <h3>Type: </h3><h4>{{animal.type}}</h4><br>
-    <h3>Owner: </h3><h4>{{animal.owner.name}}</h4><br>
-    <h3>Current Vet: </h3><h4>{{animal.vet.name}}</h4><br>
-    <h3>Allergy Information:</h3><br>
-        {% for item in allergy %}
-        <h4>{{ item.name }}</h4><br>
+    <h3 id="details" class="inline">Name</h3><h4 class="inline">{{animal.name}}</h4><br>
+    <h3 id="details" class="inline">Age</h3><h4 class="inline">{{animal.dob}}</h4><br>
+    <h3 id="details" class="inline">Species</h3><h4 class="inline">{{animal.type}}</h4><br>
+    <h3 id="details" class="inline">Owner</h3><h4 class="inline">{{animal.owner.name}}</h4><br>
+    <h3 id="details" class="inline">Vet</h3><h4 class="inline">{{animal.vet.name}}</h4><br>
+    <h3 id="details" class="inline">Allergy Info:</h3>{% for item in allergy %}<h4 class="inline">{{ item.name }} : </h4>
         {% endfor %} <br>
-    <h3>Medical History: </h3><br>
-        {% for item in history %}
-        <h4>{{ item.description }}</h4><br>
+    <h3 id="details" class="inline">Medical History: </h3>{% for item in history %}<h4 class="inline">{{ item.description }} : </h4><br>
         {% endfor %}
 </section>
 {% endblock %}
